@@ -1,0 +1,84 @@
+
+  
+    @media only screen and (min-width:100px){
+      .faq{
+        padding:  1% 13%;
+        background-color: #000;
+        color:white;
+        margin:auto;
+        text-align: center;
+      }
+      .accordion
+      {
+        font-size: 1.3rem;
+        background-color:rgb(48, 47, 47);
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        padding: 0.8em 2.2em 0.8em 1.2em;
+        margin-bottom: 10px;
+        transition: 0.4s;
+      }
+    }
+    @media only screen and (min-width:825px){
+      .faq
+      {
+        margin:auto;
+        text-align: center;
+        padding: 1% 20%;
+        background-color: #000;
+        color:white;
+      }
+      .accordion {
+        background-color: rgb(48, 47, 47);
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 1.625rem;
+        margin-bottom: 10px;
+        transition: 0.4s;
+        padding: 0.8em 2.2em 0.8em 1.2em;
+        
+        
+      }}
+      
+
+.heading{
+
+  margin: 30px 0px;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+   
+   
+   .accordion:after {
+     content: '\002B';
+     color: #777;
+     font-weight: bold;
+     float: right;
+     margin-left: 5px;
+   }
+   
+   .active:after {
+     content: "\2212";
+   }
+   
+   .panel {
+     padding: 0 18px;
+      background-color: rgb(48, 47, 47);
+    margin-bottom: 8px;
+    margin-top: 0;
+      max-height: 0px;
+     overflow: hidden;
+     transition:  0.2s ease-out;
+   }
