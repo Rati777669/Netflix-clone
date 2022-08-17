@@ -20,11 +20,11 @@ function SignUpScreen() {
   return (
     <div className="signupScreen">
       <form>
-        <h1>Sign In/Sign Up</h1>
+        <h1>Sign In</h1>
         <input ref={emailRef}  placeholder ="Email" type="email"/>
         <input ref={passwordRef} placeholder ="Password" type="password"/>
         <button type="submit" onClick={signIn}>Sign In</button>
-        <button type="submit" onClick={register}>Sign Up</button>
+       
         
       </form>
       <div className='remember'>
@@ -32,7 +32,7 @@ function SignUpScreen() {
       <span className="signupScreen-gray">Need Help?</span>
       </div>
       <h4  className='belowremember'>
-        <span className='signupScreen-gray '>New to Netflix? </span><span className='signupScreen-link' onClick={register} href="Signin.js">Sign Up now. </span></h4>
+        <span className='signupScreen-gray '>New to Netflix? </span><span className='signupScreen-link' onClick={register} href="SignUpScreen.js">Sign Up now. </span></h4>
         <span className="signupScreen-gray ">This page is protected by Google reCAPTCHA to ensure you're not a bot.</span><a> Learn more.</a>
     </div>
   )
