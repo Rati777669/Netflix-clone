@@ -6,7 +6,7 @@ import {login,logout,selectUser} from "./features/userSlice"
 import ProfileScreen from './screens/ProfileScreen';
 import {useDispatch, useSelector} from "react-redux";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
 
@@ -37,17 +37,18 @@ function App() {
   return (
    
     <div className='app'>
-       <Router>
+       <Router basename={process.env.PUBLIC_URL}>
         {!user ? ( <Loginscreen />):
-    (<Routes>
+    (<Routes basename={process.env.PUBLIC_URL}>
       <Route path ='/profile' element=
-       { <ProfileScreen/>}>
+       { <ProfileScreen/>} basename={process.env.PUBLIC_URL}>
       </Route>
-    <Route exact path="/Netflix-clone" element={<Homescreen/>}>
+    <Route exact path="/Netflix-clone/" element={<Homescreen/>} basename={process.env.PUBLIC_URL}>
     </Route>
     </Routes>)}
       </Router>
     </div>
+    
   )
 }
 

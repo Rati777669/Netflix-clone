@@ -1,7 +1,9 @@
-import React,{useRef} from 'react';
+import React,{useRef,useState} from 'react';
 import {auth} from '../Firebase';
 import './SignUpScreen.css';
-function SignUpScreen() {
+import SignUpScreen from './SignUpScreen';
+function Signin() {
+  const [Signin,setSignin]= useState(false);
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
   const register = (e) => {
@@ -32,10 +34,14 @@ function SignUpScreen() {
       <span className="signupScreen-gray">Need Help?</span>
       </div>
       <h4  className='belowremember'>
-        <span className='signupScreen-gray '>New to Netflix? </span><span className='signupScreen-link' onClick={register} href="SignUpScreen.js">Sign Up now. </span></h4>
+        <span className='signupScreen-gray '>Already a member? </span><span className='signupScreen-link' onClick={()=> setSignin(true)} >Sign In now. </span></h4>
+        <div className="signup">
+    {
+      Signin>0 && <><SignUpScreen/></>
+    }</div>
         <span className="signupScreen-gray ">This page is protected by Google reCAPTCHA to ensure you're not a bot.</span><a> Learn more.</a>
     </div>
   )
 }
 
-export default SignUpScreen
+export default Signin
